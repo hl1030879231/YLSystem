@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/bluetooth_title"
+        layout="@layout/activity_titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="37dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="血压"/>
+        <TextView
+            android:layout_width="37dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="心率"/>
+        <TextView
+            android:layout_width="37dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="血氧"/>
+        <TextView
+            android:layout_width="62dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="检测时刻"/>
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="非跌倒状态"/>
+        <TextView
+            android:layout_width="62dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="定位坐标"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="监护号"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/dataslist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+
+</LinearLayout>
