@@ -38,7 +38,7 @@
             android:text="密 码" />
 
         <EditText
-            android:id="@+id/key_login"
+            android:id="@+id/password_login"
             android:layout_width="180sp"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -58,6 +58,5 @@
         android:text="注 册" />
 
 </LinearLayout>>
-
 
 </LinearLayout>
