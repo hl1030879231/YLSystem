@@ -48,13 +48,15 @@ public class LoginActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 // 提示框
-                dialog = new ProgressDialog(LoginActivity.this);
-                dialog.setTitle("提示");
-                dialog.setMessage("正在登陆，请稍后...");
-                dialog.setCancelable(false);
-                dialog.show();
+                //dialog = new ProgressDialog(LoginActivity.this);
+                //dialog.setTitle("提示");
+               // dialog.setMessage("正在登陆，请稍后...");
+               // dialog.setCancelable(false);
+               // dialog.show();
                 // 创建子线程，分别进行Get和Post传输
-                new Thread(new MyThread()).start();
+                //new Thread(new MyThread()).start();
+
+
                 Intent intent_login = new Intent(LoginActivity.this,MainActivity.class);
                 startActivity(intent_login);
                 finish();
