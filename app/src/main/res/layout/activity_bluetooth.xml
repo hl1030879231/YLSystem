@@ -3,38 +3,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <include
         android:id="@+id/bluetooth_title"
-        layout="@layout/activity_titlebar"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:orientation="vertical"
-            android:gravity="center">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/add_message"
-                android:text="添加数据"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/turnOn_bluetooth"
-                android:text="打开蓝牙"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/find_Device"
-                android:text="查找设备"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/say_hello"
-                android:text="say_hello"/>
-        </LinearLayout>
+        layout="@layout/activity_titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/add_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加数据"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/turnOn_bluetooth"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:background="@drawable/r_corners_register"
+            android:text="打开蓝牙"
+            android:textColor="@color/color_white"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/find_Device"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/r_corners_register"
+            android:text="查找设备"
+            android:textColor="@color/color_white"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/say_hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="say_hello"
+            android:visibility="gone" />
+    </LinearLayout>
+
     <ListView
         android:id="@+id/device_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:dividerHeight="1px"/>
+        android:dividerHeight="1px" />
 </LinearLayout>

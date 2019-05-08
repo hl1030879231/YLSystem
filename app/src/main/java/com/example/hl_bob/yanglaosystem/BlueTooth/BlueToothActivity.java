@@ -195,6 +195,12 @@ public class BlueToothActivity extends AppCompatActivity {
         });
 
         //say_hello
+        button_satHello.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                say("Hello");
+            }
+        });
 
     }
 

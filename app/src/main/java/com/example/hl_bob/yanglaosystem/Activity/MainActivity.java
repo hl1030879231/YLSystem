@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.example.hl_bob.yanglaosystem.BlueTooth.BlueToothActivity;
 import com.example.hl_bob.yanglaosystem.R;
@@ -19,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void init(){
-        Button button_bluetooth = (Button)findViewById(R.id.bluetooth);
-        Button button_check = (Button)findViewById(R.id.checkdata);
+        LinearLayout button_bluetooth = (LinearLayout) findViewById(R.id.bluetooth);
+        LinearLayout button_check = (LinearLayout) findViewById(R.id.checkdata);
 
         //蓝牙入口
         button_bluetooth.setOnClickListener(new View.OnClickListener() {

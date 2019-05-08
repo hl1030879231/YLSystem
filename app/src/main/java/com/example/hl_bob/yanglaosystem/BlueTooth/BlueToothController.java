@@ -33,4 +33,17 @@ public class BlueToothController {
         assert (bluetoothAdapter != null);
         bluetoothAdapter.startDiscovery();
     }
+
+    /**
+     * 判断蓝牙是否开启
+     * @return
+     */
+    public boolean blueisenable() {
+        if (bluetoothAdapter.isEnabled()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

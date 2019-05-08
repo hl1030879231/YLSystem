@@ -31,6 +31,10 @@ public class LoginActivity extends AppCompatActivity{
     EditText username, password;
     // 返回主线程更新数据
     private static Handler handler = new Handler();
+
+    private String login_phone;
+    private String login_password;
+    private int login_key = 0;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +44,7 @@ public class LoginActivity extends AppCompatActivity{
 
     public void init(){
         Button button_login =  (Button)findViewById(R.id.login_button);
-        Button button_regier = (Button)findViewById(R.id.register);
+        TextView text_regier = (TextView) findViewById(R.id.register);
         username = (EditText)findViewById(R.id.phonum_login);
         password = (EditText)findViewById(R.id.password_login);
         //登录按钮
@@ -56,13 +60,26 @@ public class LoginActivity extends AppCompatActivity{
                 // 创建子线程，分别进行Get和Post传输
                 //new Thread(new MyThread()).start();
 
-
+                login_key = 0;
+                login_phone = String.valueOf(username.getText());
+                login_password = String.valueOf(password.getText());
+                if(login_phone.equals("") || login_phone == null){
+                    Toast.makeText(LoginActivity.this,"手机号不能为空！",Toast.LENGTH_SHORT).show();
+                    login_key = 1;
+                }
+                else if(login_password.equals("") || login_password == null){
+                    Toast.makeText(LoginActivity.this,"密码不能为空！",Toast.LENGTH_SHORT).show();
+                    login_key = 1;
+                }
+                if(login_key == 0){
                 Intent intent_login = new Intent(LoginActivity.this,MainActivity.class);
                 startActivity(intent_login);
+                Toast.makeText(LoginActivity.this,"登录成功！",Toast.LENGTH_SHORT).show();
                 finish();
+                }
             }
         });
-        button_regier.setOnClickListener(new View.OnClickListener() {
+        text_regier.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent_register = new Intent(LoginActivity.this,RegisterActivity.class);
